@@ -3,7 +3,7 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 
-import Issue from './models/Issue';
+import Issue from './models/issue';
 
 const app = express();
 app.use(cors())
@@ -16,7 +16,6 @@ mongoose.connect('mongodb://admin:password1234@ds145463.mlab.com:45463/issues');
 const connection = mongoose.connection;
 
 connection.once('open', _ => console.log('MongoDB database connection established successfully!'));
-
 
 router.route('/issues').get((req, res) => {
     Issue.find((err, issues) => {
