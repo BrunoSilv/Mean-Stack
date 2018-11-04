@@ -1,2 +1,2 @@
-# Mean-Stack-Application
+# Mean-Stack
 MEAN Stack Sample Application
